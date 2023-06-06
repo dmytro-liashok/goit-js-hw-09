@@ -7,7 +7,9 @@ form.addEventListener('submit', promiseOut);
 function promiseOut(event) {
   event.preventDefault();
 
-  const firstDelayInput = Number(document.querySelector('[name = "delay"]').value);
+  const firstDelayInput = Number(
+    document.querySelector('[name = "delay"]').value
+  );
   const stepInput = Number(document.querySelector('[name = "step"]').value);
   const amountInput = Number(document.querySelector('[name = "amount"]').value);
 

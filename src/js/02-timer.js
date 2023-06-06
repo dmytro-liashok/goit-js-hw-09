@@ -7,6 +7,7 @@ const daysTimerEl = document.querySelector('[data-days]');
 const hoursTimerEl = document.querySelector('[data-hours]');
 const minutesTimerEl = document.querySelector('[data-minutes]');
 const secondsTimerEl = document.querySelector('[data-seconds]');
+const inputTimerEl = document.querySelector('#datetime-picker');
 let delta = null;
 
 startBtnTimer.addEventListener('click', counter);
@@ -33,6 +34,7 @@ flatpickr('#datetime-picker', options);
 
 function counter() {
   startBtnTimer.disabled = true;
+  inputTimerEl.disabled = true;
 
   const timerId = setInterval(() => {
     let dateNow = new Date();
@@ -73,3 +75,5 @@ function updateTimeOnPage(objTime) {
 function addLeadingZero(value) {
   return value.toString().padStart(2, '0');
 }
+
+console.log(232);
